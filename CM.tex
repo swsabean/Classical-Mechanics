@@ -1,0 +1,44 @@
+\documentclass[answers,12pt]{exam}
+
+% Packages
+
+%% Language and font encodings
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[american]{babel}
+
+%% Layout
+\usepackage[margin=1in]{geometry}
+
+%% Fonts
+\usepackage{bm}
+\usepackage{microtype}
+\usepackage{mathrsfs}
+\usepackage{lmodern}
+
+%% Core math
+\usepackage{amsmath}
+
+%% SI units
+\usepackage{siunitx}
+
+% Useful commands and definitions
+
+%% Sections labeled as chapters
+\renewcommand{\thesection}{Chapter \arabic{section}}
+
+%% Bold question numbers
+\renewcommand{\thequestion}{\textbf{\arabic{question}}}
+
+%% Use vec{v} for an upright bold v
+\renewcommand{\vec}[1]{\bm{\mathbf{#1}}}
+
+%% Bold vector operators
+\newcommand{\bfcdot}{\boldsymbol{\cdot}}
+\newcommand{\bftimes}{\boldsymbol{\times}}
+\newcommand{\del}{\boldsymbol{\nabla}}
+\begin{document}
+
+\include{chapter1}
+
+\end{document}

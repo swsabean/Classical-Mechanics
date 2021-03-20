@@ -1,0 +1,1351 @@
+\section{Survey of the Elementary Principles}
+
+\begin{questions}
+
+\subsection*{DERIVATIONS}
+
+\question Show that for a single particle with constant mass the equation of motion implies the following differential equation for the kinetic energy:
+\[
+\frac{dT}{dt} = \vec{F} \bfcdot \vec{v},
+\]
+while if the mass varies with time the corresponding equation is
+\[
+\frac{d(mT)}{dt} = \vec{F} \bfcdot \vec{p}.
+\]
+\begin{solution}
+For a particle with constant mass, we have 
+\[
+\frac{dT}{dt} = \frac{d}{dt} \left( \frac{1}{2} mv^2 \right) = \frac{d}{dt} \left( \frac{1}{2} m \vec{v} \bfcdot \vec{v} \right) = m \dot{\vec{v}} \bfcdot \vec{v} = m \vec{a} \bfcdot \vec{v} = \vec{F} \bfcdot \vec{v},
+\]
+while for a particle with time-varying mass, we have
+\[
+\frac{d(mT)}{dt} = \frac{d}{dt} \left( \frac{1}{2} p^2 \right) = \frac{d}{dt} \left( \frac{1}{2} \vec{p} \bfcdot \vec{p} \right) = \dot{\vec{p}} \bfcdot \vec{p} = \vec{F} \bfcdot \vec{p}.
+\]
+\end{solution}
+
+\question Prove that the magnitude $R$ of the position vector for the center of mass from an arbitrary origin is given by the equation
+\[
+M^2 R^2 = M \sum_i m_i r_i^2 - \frac{1}{2} \sum_{\substack {i, j \\ i \neq j}} m_i m_j r_{ij}^2.
+\]
+\begin{solution}
+Using Eq. (1.21), we find
+\[
+M \vec{R} = \sum_i m_i \vec{r}_i.
+\]
+Therefore,
+\[
+M^2 R^2 = \sum_{i, j} m_i m_j \vec{r}_i \bfcdot \vec{r}_j.
+\]
+Since $\vec{r}_{ij} = \vec{r}_i - \vec{r}_j$, it follows that
+\[
+r_{ij}^2 = r_i^2 - 2 \vec{r}_i \bfcdot \vec{r}_i + r_j^2,
+\]
+hence,
+\[
+\vec{r}_i \bfcdot \vec{r}_j = \frac{1}{2} ( r_i^2 + r_j^2 - r_{ij}^2 ).
+\]
+Therefore, we have
+\begin{align*}
+M^2 R^2 &= \sum_{i, j} \frac{1}{2} m_i m_j ( r_i^2 + r_j^2 - r_{ij}^2 ) \\
+&= \frac{1}{2} \sum_{i, j} m_i m_j r_i^2 + \frac{1}{2} \sum_{i, j} m_i m_j r_j^2 - \frac{1}{2} \sum_{\substack{i, j\\i \neq j}} m_i m_j r_{ij}^2 \\
+&= \frac{1}{2} M \sum_i m_i r_i^2 + \frac{1}{2} M \sum_j m_j r_j^2 - \frac{1}{2} \sum_{\substack{i, j\\i \neq j}} m_i m_j r_{ij}^2 \\
+&= M \sum_i m_i r_i^2 - \frac{1}{2} \sum_{\substack{i, j\\i \neq j}} m_i m_j r_{ij}^2
+\end{align*}
+\end{solution}
+
+\question Suppose a system of two particles is known to obey the equations of motion, 
+\[
+M \frac{d^2 \vec{R}}{dt^2} = \sum_i \vec{F}_i^{(e)} \equiv \vec{F}^{(e)}
+\]
+and
+\[
+\frac{d \vec{L}}{dt} = \vec{N}^{(e)}.
+\]
+From the equations of motion of the individual particles show that the internal forces between particles satisfy both the weak and strong laws of action and reaction. The argument may be generalized to a system with arbitrary number of particles, thus proving the converse of the arguments leading to the preceding equations.
+\begin{solution}
+For this system, we have
+\[
+M \vec{R} = m_1 \vec{r}_1 + m_2 \vec{r}_2.
+\]
+Therefore, according to the first equation, above (Eq. 1.22), we find
+\[
+M \frac{d^2 \vec{R}}{dt^2} = m_1 \dot{\vec{v}}_1 + m_2 \dot{\vec{v}}_2 = \dot{\vec{p}}_1 + \dot{\vec{p}}_2 = \vec{F}^{(e)}.
+\]
+However, using Eq. 1.19, the equations of motion of the particles are
+\[
+\dot{\vec{p}}_1 = \vec{F}_1^{(e)} + \vec{F}_{21}
+\]
+and
+\[
+\dot{\vec{p}}_2 = \vec{F}_2^{(e)} + \vec{F}_{12}.
+\]
+Summing these last two equations, we have
+\[
+\dot{\vec{p}}_1 + \dot{\vec{p}}_2 = \vec{F}^{(e)} + \vec{F}_{12} + \vec{F}_{21},
+\]
+which implies that
+\[
+\vec{F}_{12} = -\vec{F}_{21}.
+\]
+Hence, the internal forces satisfy the weak law of action and reaction. Next, according to the second equation above (Eq. 1.26), we have for this system
+\[
+\frac{d \vec{L}}{dt} = \vec{r}_1 \bftimes \dot{\vec{p}}_1 + \vec{r}_2 \bftimes \dot{\vec{p}}_2 = \vec{N}^{(e)}.
+\]
+Taking the relevant cross products with the equations of motion yields
+\[
+\vec{r}_1 \bftimes \dot{\vec{p}}_1 = \vec{r}_1 \bftimes \vec{F}_1^{(e)} + \vec{r}_1 \bftimes \vec{F}_{21}
+\]
+and
+\[
+\vec{r}_2 \bftimes \dot{\vec{p}}_2 = \vec{r}_2 \bftimes \vec{F}_2^{(e)} + \vec{r}_2 \bftimes \vec{F}_{12}.
+\]
+Summing these last two equations, we have
+\[
+\dot{\vec{L}} = \vec{N}^{(e)} + \vec{r}_1 \bftimes \vec{F}_{21} + \vec{r}_2 \bftimes \vec{F}_{12}.
+\]
+Using the fact that, as established above, $\vec{F}_{12} = -\vec{F}_{21}$, we have, alternatively,
+\[
+\dot{\vec{L}} = \vec{N}^{(e)} + \vec{r}_{12} \bftimes \vec{F}_{21}
+\]
+and
+\[
+\dot{\vec{L}} = \vec{N}^{(e)} + \vec{r}_{21} \bftimes \vec{F}_{12}.
+\]
+From this, we find that
+\[
+\vec{r}_{12} \bftimes \vec{F}_{21} = \vec{r}_{21} \bftimes \vec{F}_{12} = \vec{0}.
+\]
+There are now three cases to consider. It could be that the particles occupy the same position. In this case, the weak law guarantees that the internal forces lie along the same line, and therefore satisfy the strong law. Or, it could be that the internal forces vanish. In this case, the strong law is satisfied vacuously. Lastly, it could be that the two particles occupy distinct positions and the internal forces are nonzero. In this case, the vanishing cross products indicate that the internal forces lie along the line between the particles, hence satisfying the strong law of action and reaction. 
+\end{solution}
+
+\question The equations of constraint for the rolling disk, 
+\begin{align*}
+dx - a \sin \theta \, d \phi = 0, \\
+dy + a \cos \theta \, d \phi = 0,
+\end{align*}
+Eqs. (1.39), are special cases of general linear differential equations of constraint of the form 
+\[
+\sum_{i = 1}^{n} g_i ( x_1, \ldots, x_n ) dx_i = 0.
+\]
+A constraint condition of this type is holonomic only if an integrating function $f ( x_1, \ldots, x_n )$ can be found that turns it into an exact differential. Clearly the function must be such that 
+\[
+\frac{\partial \, ( f g_i )}{\partial x_j} = \frac{\partial \, ( f g_j )}{\partial x_i}
+\]
+for all $i \neq j$. Show that no such integrating factor can be found for either of Eqs. (1.39).
+\begin{solution}
+We begin with the first of Eqs. (1.39). Taking $x_1 = x$, $x_2 = \phi$, and $x_3 = \theta$, we have $g_1 = 1$, $g_2 = -a \sin \theta$, and $g_3 = 0$. This yields the following three equations,
+\begin{align*}
+& \frac{\partial f}{\partial \phi} = \frac{\partial}{\partial x} ( -a f \sin \theta ), \\
+& \frac{\partial f}{\partial \theta} = 0, \\
+& \frac{\partial}{\partial \theta} ( -a f \sin \theta ) = 0.
+\end{align*}
+The second and third of these together imply
+\[
+\frac{\partial}{\partial \theta} ( -a f \sin \theta ) = -a f \cos \theta - a \sin \theta \frac{\partial f}{\partial \theta} = -a f \cos \theta = 0.
+\]
+The only way that this equation can be satisfied for all values of $\theta$ is if $f = 0$. We therefore conclude that no such integrating function exists. 
+
+For the second of Eqs. (1.39), we take $x_1 = y$, $x_2 = \phi$, and $x_3 = \theta$. Hence, $g_1 = 1$, $g_2 = a \cos \theta$, and $g_3 = 0$. This gives the following three equations 
+\begin{align*}
+& \frac{\partial f}{\partial \phi} = \frac{\partial}{\partial y} ( a f \cos \theta ), \\
+& \frac{\partial f}{\partial \theta} = 0, \\
+& \frac{\partial}{\partial \theta} ( a f \cos \theta) = 0.
+\end{align*}
+Once again, the second and third of these together imply 
+\[
+\frac{\partial}{\partial \theta} ( a f \cos \theta) = -a f \sin \theta + a \cos \theta \frac{\partial f}{\partial \theta} = -a f \sin \theta = 0.
+\]
+And again, the requirement that this equation hold for all values of $\theta$ implies that $f = 0$. Therefore no such integrating function exists.
+\end{solution}
+
+\question Two wheels of radius $a$ are mounted on the ends of a common axle of length $b$ such that the wheels rotate independently. The whole combination rolls without slipping on a plane. Show that there are two nonholonomic equations of constraint,
+\begin{align*}
+& \cos \theta \, dx + \sin \theta \, dy = 0 \\
+& \sin \theta \, dx - \cos \theta \, dy = \frac{1}{2} a ( d \phi + d \phi^\prime ),
+\end{align*}
+(where $\theta$, $\phi$, and $\phi^\prime$ have meanings similar to those in the problem of a single vertical disk, and $( x, y )$ are the coordinates of a point on the axle midway between the two wheels) and one holonomic equation of constraint,
+\[
+\theta = C - \frac{a}{b} ( \phi - \phi^\prime ),
+\]
+where $C$ is a constant.
+
+\begin{solution}
+Similarly to the single vertical disk, we let $\phi$ and $\phi^\prime$ be the rotation angles of the two wheels, respectively, and we let $\theta$ be the angle between the axle and the positive $x$-axis. If we let $\vec{v}$ and $\vec{v}^\prime$ be the respective velocities of the two wheels, then we have 
+\[
+v = a \dot{\phi}
+\]
+and 
+\[
+v^\prime = a \dot{\phi}^\prime.
+\]
+Let the coordinates of the center of the unprimed wheel be $( x_1, y_1 )$ and the primed wheel be $( x_2, y_2 )$. Using the equations above, we have
+\begin{align*}
+& v_x = \dot{x}_1 = a \dot{\phi} \sin \theta, \\
+& v_y = \dot{y}_1 = -a \dot{\phi} \cos \theta, 
+\end{align*}
+and
+\begin{align*}
+& v_x^\prime = \dot{x}_2 = a \dot{\phi}^\prime \sin \theta, \\
+& v_y^\prime = \dot{y}_2 = -a \dot{\phi}^\prime \cos \theta.
+\end{align*}
+For the points $( x_1, y_1 )$ and $( x_2, y_2 )$, we have
+\begin{align*}
+& x_1 = x + \frac{1}{2} b \cos \theta, \\
+& y_1 = y + \frac{1}{2} b \sin \theta,
+\end{align*}
+and
+\begin{align*}
+& x_2 = x - \frac{1}{2} b \cos \theta, \\
+& y_2 = y - \frac{1}{2} b \sin \theta.
+\end{align*}
+Taking time derivatives yields
+\begin{align*}
+& \dot{x}_1 = \dot{x} - \frac{1}{2} b \dot{\theta} \sin \theta, \\
+& \dot{y}_1 = \dot{y} + \frac{1}{2} b \dot{\theta} \cos \theta,
+\end{align*}
+and
+\begin{align*}
+& \dot{x}_2 = \dot{x} + \frac{1}{2} b \dot{\theta} \sin \theta, \\
+& \dot{y}_2 = \dot{y} - \frac{1}{2} b \dot{\theta} \cos \theta.
+\end{align*}
+Therefore, combining these results,
+\begin{align*}
+& a \dot{\phi} \sin \theta = \dot{x} - \frac{1}{2} b \dot{\theta} \sin \theta, \\
+-&a \dot{\phi} \cos \theta = \dot{y} + \frac{1}{2} b \dot{\theta} \cos \theta, \\
+& a \dot{\phi}^\prime \sin \theta = \dot{x} + \frac{1}{2} b \dot{\theta} \sin \theta, \\
+-&a \dot{\phi}^\prime \cos \theta  = \dot{y} - \frac{1}{2} b \dot{\theta} \cos \theta. 
+\end{align*}
+Hence,
+\[
+dx = \sin \theta \, ( a \, d\phi + \frac{1}{2} b \, d\theta ) ,
+\]
+and
+\[
+dy = -\cos \theta \, ( a \, d\phi + \frac{1}{2} b \, d\theta ),
+\]
+from which it follows that
+\[
+\cos \theta \, dx + \sin \theta \, dy = 0.
+\]
+Next, we have
+\begin{equation} \label{Eq:1}
+dx = \sin \theta \, ( a \, d\phi + \frac{1}{2} b \, d\theta) = \sin \theta \, ( a \, d\phi^\prime - \frac{1}{2} b \, d\theta),
+\end{equation}
+and therefore
+\[
+2 \sin \theta \, dx = a \sin^2 \theta \, ( d\phi + d\phi^\prime ).
+\]
+Also,
+\[
+dy = -\cos \theta \, ( a \, d\phi + \frac{1}{2} b \, d\theta ) = -\cos \theta \, ( a \, d\phi^\prime - \frac{1}{2} b \, d\theta ),
+\]
+from which it follows that
+\[
+2 \cos \theta \, dy = -a \cos^2 \theta \, ( d\phi + d\phi^\prime ),
+\]
+and therefore 
+\[
+\sin \theta \, dx - \cos \theta \, dy = \frac{1}{2} a ( d\phi + d\phi^\prime ).
+\]
+Lastly, using Eq.~(\ref{Eq:1}), we have
+\[
+a ( d\phi - d\phi^\prime ) + b \, d\theta = 0.
+\]
+Integrating and rearranging yields
+\[
+\theta = C - \frac{a}{b} ( \phi - \phi^\prime ),
+\]
+where $C$ is a constant of integration. 
+\end{solution}
+
+\question A particle moves in the $xy$ plane under the constraint that its velocity vector is always directed towards a point on the $x$ axis whose abscissa is some given function of time $f(t)$. Show that for $f(t)$ differentiable, but otherwise arbitrary, the constraint is nonholonomic.
+\begin{solution}
+Let $( x, y )$ be the coordinates of the particle and let $\vec{v}$ be its velocity vector. Let $\theta$ be the angle between $\vec{v}$ and the positive $x$-axis. Then, according to the constraint condition,
+\[
+\tan \theta = \frac{\dot{y}}{\dot{x}} = \frac{-y}{f(t) - x}.
+\]
+Rearranging, and in terms of differentials, we have
+\[
+y \, dx + ( f(t) - x ) \, dy = 0.
+\]
+Clearly, for $f$ an arbitrary but differentiable function of time, this equation is not integrable, therefore the constraint is nonholonomic. 
+\end{solution}
+
+\question Show that Lagrange's equations in the form of Eqs.~(1.53),
+\[
+\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) - \frac{\partial T}{\partial q_j} = Q_j,
+\]
+can also be written as
+\[
+\frac{\partial \dot{T}}{\partial \dot{q}_j} - 2 \frac{\partial T}{\partial q_j} = Q_j.
+\]
+These are sometimes known as the \emph{Nielsen} form of the Lagrange equations.
+\begin{solution}
+We begin with the expansion
+\[
+\dot{T} = \sum_i \left( \frac{\partial T}{\partial q_i} \dot{q}_i + \frac{\partial T}{\partial \dot{q}_i} \ddot{q}_i \right) + \frac{\partial T}{\partial t}.
+\]
+Therefore
+\[
+\frac{\partial \dot{T}}{\partial \dot{q}_j} = \sum_i \left( \frac{\partial^2 T}{\partial \dot{q}_j \partial q_i} \dot{q}_i + \frac{\partial^2 T}{\partial \dot{q}_j \partial \dot{q}_i} \ddot{q}_i \right) + \frac{\partial T}{\partial q_j} + \frac{\partial^2 T}{\partial \dot{q}_j \partial t}.
+\]
+Assuming that all of the second partial derivatives of $T$ are continuous, we have
+\begin{align*}
+\frac{\partial \dot{T}}{\partial \dot{q}_j} &= \sum_i \left( \frac{\partial^2 T}{\partial q_i \partial \dot{q}_j} \dot{q}_i + \frac{\partial^2 T}{\partial \dot{q}_i \partial \dot{q}_j} \ddot{q}_i \right) + \frac{\partial^2 T}{\partial t \partial \dot{q}_j} + \frac{\partial T}{\partial q_j} \\
+&= \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) + \frac{\partial T}{\partial q_j}.
+\end{align*}
+Hence,
+\[
+\frac{\partial \dot{T}}{\partial \dot{q}_j} - 2 \frac{\partial T}{\partial q_j} = \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{q}_j} \right) - \frac{\partial T}{\partial q_j} = Q_j,
+\]
+as desired.
+\end{solution}
+
+\question If $L$ is a Lagrangian for a system of $n$ degrees of freedom satisfying Lagrange's equations, show by direct substitution that
+\[
+L^\prime = L + \frac{dF(q_1,\ldots, q_n, t)}{dt}
+\]
+also satisfies Lagrange's equations where $F$ is any arbitrary, but differentiable, function of its arguments.
+\begin{solution}
+First, we note that
+\[
+\frac{dF}{dt} = \sum_i \left( \frac{\partial F}{\partial q_i} \dot{q}_i \right) + \frac{\partial F}{\partial t}.
+\]
+Therefore,
+\[
+\frac{\partial L^\prime}{\partial \dot{q}_j} = \frac{\partial L}{\partial \dot{q}_j} + \frac{\partial F}{\partial q_j},
+\]
+which implies that
+\[
+\frac{d}{dt} \left( \frac{\partial L^\prime}{\partial \dot{q}_j} \right) = \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_j} \right) + \frac{d}{dt} \left( \frac{\partial F}{\partial q_j} \right).
+\]
+It appears that when the Goldstein says that a function is differentiable, he means that it is smooth. Taking this to be the case, or, at the very least, that $F$ is sufficiently continuously differentiable to provide for the commutativity of second partial derivatives, we have next
+\begin{align*}
+\frac{\partial L^\prime}{\partial q_j} &= \frac{\partial L}{\partial q_j} + \sum_i \left( \frac{\partial^2 F}{\partial q_j \partial q_i} \dot{q}_i \right) + \frac{\partial^2 F}{\partial q_j \partial t} \\
+&= \frac{\partial L}{\partial q_j} + \sum_i \left( \frac{\partial^2 F}{\partial q_i \partial q_j} \dot{q}_i \right) + \frac{\partial^2 F}{\partial t \partial q_j} \\
+&= \frac{\partial L}{\partial q_j} + \frac{d}{dt} \left( \frac{\partial F}{\partial q_j} \right).
+\end{align*}
+Since $L$ satisfies Lagrange's equations, combining these results yields
+\[
+\frac{d}{dt} \left( \frac{\partial L^\prime}{\partial \dot{q}_j} \right) - \frac{\partial L^\prime}{\partial q_j} = \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_j} \right) - \frac{\partial L}{\partial q_j} = 0,
+\]
+as desired. 
+\end{solution}
+
+\question The electromagnetic field is invariant under a gauge transformation of the scalar and vector potential given by
+\begin{align*}
+&\vec{A} \rightarrow \vec{A} + \del \psi ( \vec{r}, t ), \\
+&\phi \rightarrow \phi - \frac{\partial \psi}{\partial t},
+\end{align*}
+where $\psi$ is arbitrary (but differentiable). What effect does this gauge transformation have on the Lagrangian of a particle moving in the electromagnetic field? Is the motion affected?
+\begin{solution}
+The Lagrangian of a particle moving in an electromagnetic field is
+\[
+L = \frac{1}{2} m v^2 - q \phi + q \vec{A} \bfcdot \vec{v}.
+\]
+Let $L^\prime$ be the gauge transformed Lagrangian. Then
+\begin{align*}
+L^\prime &= \frac{1}{2} m v^2 - q \left( \phi - \frac{\partial \psi}{\partial t} \right) + q ( \vec{A} + \del \psi ) \bfcdot \vec{v} \\
+&= \frac{1}{2} m v^2 - q \phi + q \vec{A} \bfcdot \vec{v} + q \left( \frac{\partial \psi}{\partial t} + \del \psi \bfcdot \vec{v} \right) \\
+&= L + q \frac{d \psi}{dt}.
+\end{align*}
+Using the result of Exercise 8, we find that $L^\prime$ satisfies Lagrange's equations since $L$ does. Therefore, the motion of the particle is unaffected.
+\end{solution}
+
+\question Let $q_1, \ldots, q_n$ be a set of independent generalized coordinates for a system of $n$ degrees of freedom with a Lagrangian $L ( q, \dot{q}, t )$. Suppose we transform to another set of independent coordinates $s_1, \ldots, s_n$ by means of the transformation equations
+\[
+q_i = q_i ( s_1, \ldots, s_n, t ) \qquad i = 1, \ldots, n.
+\]
+(Such a transformation is called a \emph{point transformation}.) Show that if the Lagrangian function is expressed as a function of $s_j$, $\dot{s}_j$, and $t$ through the equations of transformation, then $L$ satisfies Lagrange's equations with respect to the $s$ coordinates:
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{s}_j} \right) - \frac{\partial L}{\partial s_j} = 0.
+\]
+In other words, the form of Lagrange's equations is invariant under a point transformation.
+\begin{solution}
+We have
+\[
+\frac{\partial L}{\partial s_j} = \sum_i \left( \frac{\partial L}{\partial q_i} \frac{\partial q_i}{\partial s_j} + \frac{\partial L}{\partial \dot{q}_i} \frac{\partial \dot{q}_i}{\partial s_j} \right)
+\]
+and
+\[
+\frac{\partial L}{\partial \dot{s}_j} = \sum_i \frac{\partial L}{\partial \dot{q}_i} \frac{\partial \dot{q}_i}{\partial \dot{s}_j},
+\]
+which yields
+\[
+\frac{d}{dt} \left( \frac {\partial L}{\partial \dot{s}_j} \right) = \sum_i \left[ \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) \frac{\partial \dot{q}_i}{\partial \dot{s}_j} + \frac{\partial L}{\partial \dot{q}_i} \frac{d}{dt} \left( \frac{\partial \dot{q}_i}{\partial \dot{s}_j} \right) \right].
+\]
+Now,
+\[
+\dot{q}_i = \sum_k \left( \frac{\partial q_i}{\partial s_k} \dot{s}_k \right) + \frac{\partial q_i}{\partial t},
+\]
+so that
+\[
+\frac{\partial \dot{q}_i}{\partial \dot{s}_j} = \frac{\partial q_i}{\partial s_j}
+\]
+and, assuming that the second partial derivatives of $q_i$ are all continuous,
+\begin{align*}
+\frac{d}{dt} \left( \frac{\partial \dot{q}_i}{\partial \dot{s}_j} \right) = \frac{d}{dt} \left( \frac{\partial q_i}{\partial s_j} \right) &= \sum_k \left( \frac{\partial^2 q_i}{\partial s_k \partial s_j} \dot{s}_k \right) + \frac{\partial^2 q_i}{\partial t \partial s_j} \\
+&= \sum_k \left( \frac{\partial^2 q_i}{\partial s_j \partial s_k} \dot{s}_k \right) + \frac{\partial^2 q_i}{\partial s_j \partial t} \\
+&= \frac{\partial \dot{q}_i}{\partial s_j}.
+\end{align*}
+Therefore,
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{s}_j} \right) = \sum_i \left[ \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_j} \right) \frac{\partial q_i}{\partial s_j} + \frac{\partial L}{\partial \dot{q}_i} \frac{\partial \dot{q}_i}{\partial s_j} \right],
+\]
+from which it follows that
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{s}_j} \right) - \frac{\partial L}{\partial s_j} = \sum_i \left[ \frac{d}{dt} \left( \frac{\partial L}{\partial \dot{q}_i} \right) - \frac{\partial L}{\partial q_i} \right] \frac{\partial q_i}{\partial s_j} = 0.
+\]
+\end{solution}
+
+\subsection*{EXERCISES}
+
+\question Consider a uniform thin disk that rolls without slipping on a horizontal plane. A horizontal force is applied to the center of the disk and in a direction parallel to the plane of the disk.
+\begin{parts}
+\part Derive Lagrange's equations and find the generalized force.
+\part Discuss the motion if the force is not applied parallel to the plane of the disk.
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part Let $a$ be the radius of the disk and let $m$ be its mass. Since the force is applied parallel to the disk, it rolls along a straight line. Hence, we may assume, without loss of generality, that it rolls along the $x$ axis. Since the force is applied to the center of the disk, it does not give rise to any torque. Thus, there are two generalized coordinates, $x$, the position of the contact point on the $x$ axis, and $\phi$, the angle through which the disk has rotated. However, these two generalized coordinates are related through the rolling without slipping constraint by the differential equation,
+\[
+\dot{x} =a \dot{\phi},
+\]
+which is integrable, and if the contact point is initially at the origin, we have
+\[
+x = a \phi.
+\]
+The kinetic energy of the disk has two parts, translational and rotational:
+\[
+T = \frac{1}{2} m \dot{x}^2 + \frac{1}{2} I \dot{\phi}^2,
+\]
+where $I$ is the moment of inertia of the disk. Since the disk is uniform, its moment of inertia is
+\[
+I = \frac{1}{2} m a^2,
+\]
+and therefore, using the constraint condition,
+\[
+T = \frac{3}{4} m a^2 \dot{\phi}^2.
+\]
+Hence, there is a single Lagrange equation, namely,
+\[
+\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\phi}} \right) - \frac{\partial T}{\partial \phi} = \frac{3}{2} m a^2 \ddot{\phi} = Q,
+\]
+where $Q$ is the generalized force. 
+\part If the applied force is not parallel to the plane of the disk, then, provided that the plane of the disk is constrained to remain vertical, the disk will have a tendency to turn about its vertical axis. This would necessitate the introduction of additional generalized coordinates, as well as nonholonomic constraints. 
+\end{parts}
+\end{solution}
+
+\question The \emph{escape velocity} of a particle on Earth is the minimum velocity required at Earth's surface in order that the particle can escape from Earth's gravitational field. Neglecting the resistance of the atmosphere, the system is conservative. From the conservation theorem for potential plus kinetic energy show that the escape velocity for Earth, ignoring the presence of the Moon, is \SI{11.2}{\km/\s}.
+\begin{solution}
+The potential energy of the particle is given by
+\[
+V = \frac{G M m}{r},
+\]
+where $G$ is the gravitational constant, $M$ is the mass of the Earth, $m$ is the mass of the particle, and $r$ is its dist,ance from the center of the Earth. Thus, at infinity, the particle has zero potential energy. In order to just escape from Earth's gravitational field, the kinetic energy of the particle at infinity must be zero. Therefore, the total energy of the particle at infinity is zero. Hence, by the conservation theorem for potential plus kinetic energy, we must have, at the Earth's surface,
+\[
+\frac{1}{2} m v_e^2 - \frac{G M m}{R} = 0,
+\]
+where $v_e$ is the escape velocity and $R$ is the radius of the Earth. It follows that
+\[
+v_e = \sqrt{\frac{2 G M}{R}}.
+\]
+Substituting the relevant numerical values, we have
+\[
+v_e = \sqrt{\frac{2 ( \SI{6.67e-11}{\cubic\m\per\kg\per\s} ) ( \SI{5.97e24}{\kg} )}{\SI{6.38e6}{\m}}} = \SI{11.2}{\km/\s}.
+\]
+\end{solution}
+
+\question Rockets are propelled by the momentum reaction of the exhaust gases expelled from the tail. Since these gases arise from the reaction of the fuels carried in the rocket, the mass of the rocket is not constant, but decreases as the fuel is expended. Show that the equation of motion for a rocket projected vertically upward in a uniform gravitational field, neglecting atmospheric friction, is
+\[
+m \frac{dv}{dt} = -v^\prime \frac{dm}{dt} - m g,
+\]
+where $m$ is the mass of the rocket and $v^\prime$ is the velocity of the escaping gases relative to the rocket. Integrate this equation to obtain $v$ as a function, assuming a constant time rate of loss of mass. Show, for a rocket starting initially from rest, with $v^\prime$ equal to \SI{2.1}{\km/\s} and a mass loss per second equal to 1/60th of the initial mass, that in order to reach the escape velocity the ratio of the weight of the fuel to the weight of the empty rocket must be almost 300!
+\begin{solution}
+There are two forces acting on the rocket, namely, the gravitational force, $-m g$, where the negative sign indicates that the force is directed downwards, the upward direction being taken as positive, and the thrust, that is, the force exerted on the rocket by the escaping gases. Since the momentum of the rocket plus the escaping gases is conserved, the thrust is equal to the time rate of change of the momentum of the escaping gases, $-v^\prime \, dm / dt$. Since $dm/dt$ is negative, the thrust is overall positive and therefore directed upward. Newton's Second Law for the rocket is $F = dp / dt = m \, dv / dt + v \, dm / dt$. Since, in the reference frame of the rocket, $v = 0$, we have
+\[
+m \frac{dv}{dt} = -v^\prime \frac{dm}{dt} - mg.
+\]
+If we let
+\[
+\frac{dm}{dt} = k = \text{constant,}
+\]
+then
+\[
+\frac{dv}{dt} = -\frac{v^\prime k}{m} - g.
+\]
+Since
+\[
+\frac{dv}{dt} = \frac{dv}{dm} \frac{dm}{dt} = \frac{dv}{dm} k,
+\]
+we have
+\[
+\frac{dv}{dm} = -\frac{v^\prime}{m} - \frac{g}{k}.
+\]
+We may rearrange this equation and then integrate to obtain
+\[
+v(m) = v^\prime \ln \frac{m_0}{m} + \frac{g}{k} (m_0 - m),
+\]
+where $m_0$ is the initial mass of the rocket and $v(m_0) = 0$. If we take $k = -m_0 / 60$~\si{\per\s}, then if $m_f$ is the mass of the fuel and $m_e$ is the mass of the empty rocket, so that $m_0 = m_f + m_e$, we have, at the point when all of the fuel has been expended,
+\[
+v = v^\prime \ln \left( 1 + \frac{m_f}{m_e} \right) - 60 g \frac{m_f}{m_f + m_e}.
+\]
+Since $m_f \gg m_e$, we may take $m_f / (m_f + m_e ) \approx 1$. Hence, after substituting the relevant numerical values, we have 
+\[
+\SI{11200}{\m/\s} = ( \SI{2100}{\m/\s} ) \ln \left( 1 + \frac{m_f}{m_e} \right) - ( \SI{60}{\s} ) ( \SI{9.81}{\m/\s\square} ).
+\]
+Solving this equation, we find
+\[
+\frac{m_f}{m_e} \approx 273.
+\]
+\end{solution}
+
+\question Two points of mass $m$ are joined by a rigid weightless rod of length $l$, the center of which is constrained to move on a circle of radius $a$. Express the kinetic energy in generalized coordinates.
+\begin{solution}
+Some care is necessary here. We note that although the center of the rod is constrained to move on the circle, the rod itself is able to rotate in three dimensions. Orient a Cartesian coordinate system with origin, $O$, at the center of the circle and with the circle in the $xy$ plane. Let the two mass points be labeled $A$ and $B$ and let the center of the rod be labeled $C$. There are three generalized coordinates. The first, $\psi$, is the angle between the segment $OC$ and the positive $x$ axis. The second, $\phi$, is the angle between the projection of the segment $CA$ onto the $xy$ plane and the positive $x$ axis, i.e., the azimuthal angle. The third, $\theta$, is the angle between the segment $CA$ and the positive $z$ axis, i.e., the polar or zenith angle. We shall regard the total kinetic energy as the sum of the kinetic energy associated with the center of mass, and the kinetic of the two mass points about the center of mass,
+\[
+T = \frac{1}{2} M v^2 + \frac{1}{2} m v_A^2 + \frac{1}{2} m v_B^2,
+\]
+where $M = 2m$ is the total mass of the system, $v$ is the velocity of the center of mass with respect to the origin, and $v_A$ and $v_B$ are the velocities of the points $A$ and $B$ with respect to the center of mass. Due to the constraints, we have $\vec{v}_A = -\vec{v}_B$, from which it follows that $v_A^2 = v_B^2$. Therefore,
+\[
+T = m v^2 + m v_A^2.
+\]
+Clearly, the center of mass of this system is located at the center of the rod. The coordinates of the center of mass are
+\begin{align*}
+x &= a \cos \psi, \\
+y &= a \sin \psi, \\
+z &= 0.
+\end{align*}
+Differentiating each of these equations with respect to time yields
+\begin{align*}
+\dot{x} &= -a \dot{\psi} \sin \psi, \\
+\dot{y} &= a \dot{\psi} \cos \psi, \\
+\dot{z} &= 0.
+\end{align*}
+Hence,
+\[
+v^2 = \dot{x}^2 + \dot{y}^2 + \dot{z}^2 = a^2 \dot{\psi}^2 ( \sin^2 \psi + \cos^2 \psi ) = a^2 \dot{\psi}^2.
+\]
+The coordinates of point $A$ with respect to the center of mass are given by
+\begin{align*}
+x_A &= \frac{l}{2} \cos \phi \sin \theta, \\
+y_A &= \frac{l}{2} \sin \phi \sin \theta, \\
+z_A &= \frac{l}{2} \cos \theta.
+\end{align*}
+Differentiating each of these equations with respect to time yields
+\begin{align*}
+\dot{x}_A &= \frac{l}{2} ( -\dot{\phi} \sin \phi \sin \theta + \dot{\theta} \cos \phi \cos \theta ), \\
+\dot{y}_A &= \frac{l}{2} ( \dot{\phi} \cos \phi \sin \theta + \dot{\theta} \sin \phi \cos \theta ). \\
+\dot{z}_A &= -\frac{l}{2} \dot{\theta} \sin \theta.
+\end{align*}
+Squaring each of these, we have
+\begin{align*}
+\dot{x}_A^2 &= \frac{l^2}{4} ( \dot{\phi}^2 \sin^2 \phi \sin^2 \theta - 2 \dot{\phi} \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta + \dot{\theta}^2 \cos^2 \phi \cos^2 \theta ), \\
+\dot{y}_A^2 &= \frac{l^2}{4} ( \dot{\phi}^2 \cos^2 \phi \sin^2 \theta + 2 \dot{\phi} \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta + \dot{\theta}^2 \sin^2 \phi \cos^2 \theta ), \\
+\dot{z}_A^2 &= \frac{l^2}{4} \dot{\theta}^2 \sin^2 \theta. 
+\end{align*}
+Hence,
+\begin{align*}
+v_A^2 = \dot{x}_A^2 + \dot{y}_A^2 + \dot{z}_A^2 &= \frac{l^2}{4} [ \dot{\phi}^2 \sin^2 \theta ( \sin^2 \phi + \cos^2 \phi ) + \dot{\theta}^2 \cos^2 \theta ( \sin^2 \phi + \cos^2 \phi ) + \dot{\theta}^2 \sin^2 \theta ] \\
+&= \frac{l^2}{4} [ \dot{\phi}^2 \sin^2 \theta + \dot{\theta}^2 ( \sin^2 \theta + \cos^2 \theta ) ] \\
+&= \frac{l^2}{4} ( \dot{\phi}^2 \sin^2 \theta + \dot{\theta}^2 ).
+\end{align*}
+Therefore, the kinetic energy of the system is
+\[
+T = m a^2 \dot{\psi}^2 + \frac{1}{4} m l^2 ( \dot{\phi}^2 \sin^2 \theta + \dot{\theta}^2 ).
+\]
+\end{solution}
+
+\question A point particle moves in space under theinfluence of a force derivable from a generalized potential of the form
+\[
+U ( \vec{r}, \vec{v} ) = V ( r ) + \vec{\sigma} \bfcdot \vec{L},
+\]
+where $\vec{r}$ is the radius vector from a fixed point, $\vec{L}$ is the angular momentum about that point, and $\vec{\sigma}$ is a fixed vector in space.
+\begin{parts}
+\part Find the components of the force on the particle in both Cartesian and spherical polar coordinates, on the basis of Eq.~(1.58),
+\[
+Q_j = -\frac{\partial U}{\partial q_j} + \frac{d}{dt} \left( \frac{\partial U}{\partial \dot{q}_j} \right).
+\]
+\part Show that the components in the two coordinate systems are related to each other as in Eq.~(1.49),
+\[
+Q_j = \sum_i \vec{F}_i \bfcdot \frac{\partial \vec{r}_i}{\partial q_j}.
+\]
+\part Obtain the equations of motion in spherical polar coordinates.
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part Since $r = \sqrt{x^2 + y^2 + z^2}$, we have
+\[
+\frac{\partial r}{\partial x} = \frac{x}{\sqrt{x^2 + y^2 + z^2}} = \frac{x}{r}.
+\]
+Thus,
+\[
+\frac{\partial V}{\partial x} = \frac{dV}{dr} \frac{\partial r}{\partial x} = \frac{dV}{dr} \frac{x}{r},
+\]
+and similarly for the derivatives of $V$ with respect to $y$ and $z$. The ensuing calculations will be greatly simplified by choosing a coordinate system such that $\vec{\sigma}$ is in the direction of the positive $z$ axis. Then,
+\[
+\vec{\sigma} \bfcdot \vec{L} = \sigma ( x p_y - y p_x) = m \sigma ( x \dot{y} - y \dot{x} ).
+\]
+Therefore,
+\[
+\frac{\partial U}{\partial x} = \frac{dV}{dr} \frac{x}{r} + m \sigma \dot{y},
+\]
+and
+\[
+\frac{\partial U}{\partial \dot{x}} = -m \sigma y,
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{x}} \right) = -m \sigma \dot{y}.
+\]
+Therefore,
+\[
+F_x = -\frac{dV}{dr} \frac{x}{r} - 2 m \sigma \dot{y}.
+\]
+Next,
+\[
+\frac{\partial U}{\partial y} = \frac{dV}{dr} \frac{y}{r} -  m \sigma \dot{x},
+\]
+and
+\[
+\frac{\partial U}{\partial \dot{y}} = m \sigma x,
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{y}} \right) = m \sigma \dot{x}.
+\]
+Therefore,
+\[
+F_y = -\frac{dV}{dr} \frac{y}{r} + 2 m \sigma \dot{x}.
+\]
+Finally,
+\[
+\frac{\partial U}{\partial z} = \frac{dV}{dr} \frac{z}{r},
+\]
+and
+\[
+\frac{\partial U}{\partial \dot{z}} = 0,
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{z}} \right) = 0.
+\]
+Therefore,
+\[
+F_z = -\frac{dV}{dr} \frac{z}{r}.
+\]
+To calculate the components of the generalized force in spherical coordinates, we begin with the transformation equations,
+\begin{align*}
+&x = r \cos \phi \sin \theta, \\
+&y = r \sin \phi \sin \theta, \\
+&z = r \cos \theta,
+\end{align*}
+and their time derivatives,
+\begin{align*}
+&\dot{x} = \dot{r} \cos \phi \sin \theta - r \dot{\phi} \sin \phi \sin \theta + r \dot{\theta} \cos \phi \cos \theta, \\
+&\dot{y} = \dot{r} \sin \phi \sin \theta + r \dot{\phi} \cos \phi \sin \theta + r \dot{\theta} \sin \phi \cos \theta, \\
+&\dot{z} = \dot{r} \cos \theta - r \dot{\theta} \sin \theta.
+\end{align*}
+Now,
+\[
+x \dot{y} = r \dot{r} \sin \phi \cos \phi \sin^2 \theta + r^2 \dot{\phi} \cos^2 \phi \sin^2 \theta + r^2 \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta
+\]
+and
+\[
+y \dot{x} = r \dot{r} \sin \phi \cos \phi \sin^2 \theta - r^2 \dot{\phi} \sin^2 \phi \sin^2 \theta + r^2 \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta.
+\]
+Hence,
+\[
+\vec{\sigma} \bfcdot \vec{L} = m r^2 \sigma \dot{\phi} \sin^2 \theta.
+\]
+Thus,
+\[
+\frac{\partial U}{\partial r} = \frac{dV}{dr} + 2 m r \sigma \dot{\phi} \sin^2 \theta,
+\]
+and
+\[
+\frac{\partial U}{\partial \dot{r}} = 0,
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{r}} \right) = 0.
+\]
+Therefore,
+\[
+Q_r = -\frac{dV}{dr} - 2 m r \sigma \dot{\phi} \sin^2 \theta.
+\]
+Next,
+\[
+\frac{\partial U}{\partial \phi} = 0,
+\]
+and
+\[
+\frac{\partial U}{\partial \dot{\phi}} = m r^2 \sigma \sin^2 \theta,
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{\phi}} \right) = 2 m r \dot{r} \sigma \sin^2 \theta + 2 m r^2 \dot{\theta} \sigma \sin \theta \cos \theta = 2 m r \sigma \sin \theta ( \dot{r} \sin \theta + r \dot{\theta} \cos \theta ).
+\]
+Therefore,
+\[
+Q_\phi = 2 m r \sigma \sin \theta ( \dot{r} \sin \theta + r \dot{\theta} \cos \theta ).
+\]
+Finally,
+\[
+\frac{\partial U}{\partial \theta} = 2 m r^2 \sigma \dot{\phi} \sin \theta \cos \theta,
+\]
+and
+\[
+\frac{\partial U}{\partial \dot{\theta}} = 0,
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{\theta}} \right) = 0.
+\]
+Therefore,
+\[
+Q_\theta = -2 m r^2 \sigma \dot{\phi} \sin \theta \cos \theta.
+\]
+
+\part
+First, we have
+\begin{align*}
+F_x \frac{\partial x}{\partial r} =& \left( -\frac{dV}{dr} \frac{x}{r} - 2 m \sigma \dot{y} \right) \frac{\partial x}{\partial r} \\
+=& \biggl[ -\frac{dV}{dr} \frac{r \cos \phi \sin \theta}{r} - 2 m \sigma ( \dot{r} \sin \phi \sin \theta + r \dot{\phi} \cos \phi \sin \theta \\
+&\qquad + r \dot{\theta} \sin \phi \cos \theta ) \biggr] \frac{\partial}{\partial r} ( r \cos \phi \sin \theta ) \\
+=& -\frac{dV}{dr} \cos^2 \phi \sin^2 \theta - 2 m \sigma ( \dot{r} \sin \phi \cos \phi \sin^2 \theta + r \dot{\phi} \cos^2 \phi \sin^2 \theta \\
+&\qquad + r \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta ),
+\end{align*}
+\begin{align*}
+F_y \frac{\partial y}{\partial r} =& \left( -\frac{dV}{dr} \frac{y}{r} + 2 m \sigma \dot{x} \right) \frac{\partial y}{\partial r} \\
+=& \biggl[ -\frac{dV}{dr} \frac{r \sin \phi \sin \theta}{r} + 2 m \sigma ( \dot{r} \cos \phi \sin \theta - r \dot{\phi} \sin \phi \sin \theta \\
+&\qquad + r \dot{\theta} \cos \phi \cos \theta ) \biggr] \frac{\partial}{\partial r} ( r \sin \phi \sin \theta ) \\
+=& -\frac{dV}{dr} \sin^2 \phi \sin^2 \theta + 2 m \sigma ( \dot{r} \sin \phi \cos \phi \sin^2 \theta - r \dot{\phi} \sin^2 \phi \sin^2 \theta \\
+&\qquad + r \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta ),
+\end{align*}
+\begin{align*}
+F_z \frac{\partial z}{\partial r} =& -\frac{dV}{dr} \frac{z}{r} \frac{\partial z}{\partial r} \\
+=& -\frac{dV}{dr} \frac{r \cos \theta}{r} \frac{\partial}{\partial r} ( r \cos \theta ) \\
+=& -\frac{dV}{dr} \cos^2 \theta.
+\end{align*}
+Combining these results, we have
+\begin{align*}
+\vec{F} \bfcdot \frac{\partial \vec{r}}{\partial r} =& F_x \frac{\partial x}{\partial r} + F_y \frac{\partial y}{\partial r} + F_z \frac{\partial z}{\partial r} \\
+=& -\frac{dV}{dr} - 2 m r \sigma \dot{\phi} \sin^2 \theta \\
+=& Q_r.
+\end{align*}
+Next,
+\begin{align*}
+F_x \frac{\partial x}{\partial \phi} =& \left( -\frac{dV}{dr} \frac{x}{r} - 2 m \sigma \dot{y} \right) \frac{\partial x}{\partial \phi} \\
+=& \biggl[ -\frac{dV}{dr} \frac{r \cos \phi \sin \theta}{r} - 2 m \sigma ( \dot{r} \sin \phi \sin \theta + r \dot{\phi} \cos \phi \sin \theta \\
+&\qquad + r \dot{\theta} \sin \phi \cos \theta ) \biggr] \frac{\partial}{\partial \phi} ( r \cos \phi \sin \theta ) \\
+=& \frac{dV}{dr} r \sin \phi \cos \phi \sin^2 \theta + 2 m r \sigma ( \dot{r} \sin^2 \phi \sin^2 \theta + r \dot{\phi} \sin \phi \cos \phi \sin^2 \theta \\
+&\qquad + r \dot{\theta} \sin^2 \phi \sin \theta \cos \theta ),
+\end{align*}
+\begin{align*}
+F_y \frac{\partial y}{\partial \phi} =& \left( -\frac{dV}{dr} \frac{y}{r} + 2 m \sigma \dot{x} \right) \frac{\partial y}{\partial \phi} \\
+=& \biggl[ -\frac{dV}{dr} \frac{r \sin \phi \sin \theta}{r} + 2 m \sigma ( \dot{r} \cos \phi \sin \theta - r \dot{\phi} \sin \phi \sin \theta \\
+&\qquad + r \dot{\theta} \cos \phi \cos \theta ) \biggr] \frac{\partial}{\partial \phi} ( r \sin \phi \sin \theta ) \\
+=& -\frac{dV}{dr} r \sin \phi \cos \phi \sin^2 \theta + 2 m r \sigma ( \dot{r} \cos^2 \phi \sin^2 \theta - r \dot{\phi} \sin \phi \cos \phi \sin^2 \theta \\
+&\qquad + r \dot{\theta} \cos^2 \phi \sin \theta \cos \theta ),
+\end{align*}
+\begin{align*}
+F_z \frac{\partial z}{\partial \phi} =& -\frac{dV}{dr} \frac{z}{r} \frac{\partial z}{\partial \phi} \\
+=& -\frac{dV}{dr} \frac{r \cos \theta}{r} \frac{\partial}{\partial \phi} ( r \cos \theta) \\
+=& 0.
+\end{align*}
+Combining these results, we have
+\begin{align*}
+\vec{F} \bfcdot \frac{\partial \vec{r}}{\partial \phi} =& F_x \frac{\partial x}{\partial \phi} + F_y \frac{\partial y}{\partial \phi} + F_z \frac{\partial z}{\partial \phi} \\
+=& 2 m r \sigma \sin \theta ( \dot{r} \sin \theta + r \dot{\theta} \cos \theta ) \\
+=& Q_\phi.
+\end{align*}
+Finally,
+\begin{align*}
+F_x \frac{\partial x}{\partial \theta} =& \left( -\frac{dV}{dr} \frac{x}{r} - 2 m \sigma \dot{y} \right) \frac{\partial x}{\partial \theta} \\
+=& \biggl[ -\frac{dV}{dr} \frac{r \cos \phi \sin \theta}{r} - 2 m \sigma ( \dot{r} \sin \phi \sin \theta + r \dot{\phi} \cos \phi \sin \theta \\
+&\qquad + r \dot{\theta} \sin \phi \cos \theta ) \biggr] \frac{\partial}{\partial \theta} ( r \cos \phi \sin \theta ) \\
+=& -\frac{dV}{dr} r \cos^2 \phi \sin \theta \cos \theta - 2 m 
+r \sigma ( \dot{r} \sin \phi \cos \phi \sin \theta \cos \theta \\
+&\qquad + r \dot{\phi} \cos^2 \phi \sin \theta \cos \theta + r \dot{\theta} \sin \phi \cos \phi \cos^2 \theta ),
+\end{align*}
+\begin{align*}
+F_y \frac{\partial y}{\partial \theta} =& \left( -\frac{dV}{dr} \frac{y}{r} + 2 m \sigma \dot{x} \right) \frac{\partial y}{\partial \theta} \\
+=& \biggl[ -\frac{dV}{dr} \frac{r \sin \phi \sin \theta}{r} + 2 m \sigma ( \dot{r} \cos \phi \sin \theta - r \dot{\phi} \sin \phi \sin \theta \\
+&\qquad + r \dot{\theta} \cos \phi \cos \theta ) \biggr] \frac{\partial}{\partial \theta} ( r \sin \phi \sin \theta ) \\
+=& -\frac{dV}{dr} r \sin^2 \phi \sin \theta \cos \theta + 2 m r \sigma ( \dot{r} \sin \phi \cos \phi \sin \theta \cos \theta \\
+&\qquad - r \dot{\phi} \sin^2 \phi \sin \theta \cos \theta + r \dot{\theta} \sin \phi \cos \phi \cos^2 \theta ),
+\end{align*}
+\begin{align*}
+F_z \frac{\partial z}{\partial \theta} =& -\frac{dV}{dr} \frac{z}{r} \frac{\partial z}{\partial \theta} \\
+=& -\frac{dV}{dr} \frac{r \cos \theta}{r} \frac{\partial}{\partial \theta} ( r \cos \theta ) \\
+=& \frac{dV}{dr} r \sin \theta \cos \theta.
+\end{align*}
+Combining these results, we have
+\begin{align*}
+\vec{F} \bfcdot \frac{\partial \vec{r}}{\partial \theta} =& F_x \frac{\partial x}{\partial \theta} + F_y \frac{\partial y}{\partial \theta} + F_z \frac{\partial z}{\partial \theta} \\
+=& -2 m r^2 \sigma \dot{\phi} \sin \theta \cos \theta \\
+=& Q_\theta.
+\end{align*}
+\part
+First, we require the kinetic energy in spherical polar coordinates. To this end,  we have
+\begin{align*}
+\dot{x}^2 &= \dot{r}^2 \cos^2 \phi \sin^2 \theta + r^2 \dot{\phi}^2 \sin^2 \phi \sin^2 \theta + r^2 \dot{\theta}^2 \cos^2 \phi \cos^2 \theta \\
+&\qquad - 2 r \dot{r} \dot{\phi} \sin \phi \cos \phi \sin^2 \theta + 2 r \dot{r} \dot{\theta} \cos^2 \phi \sin \theta \cos \theta \\
+&\qquad - 2 r^2 \dot{\phi} \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta,
+\end{align*}
+\begin{align*}
+\dot{y}^2 =& \dot{r}^2 \sin^2 \phi \sin^2 \theta + r^2 \dot{\phi}^2 \cos^2 \phi \sin^2 \theta + r^2 \dot{\theta}^2 \sin^2 \phi \cos^2 \theta \\
+&\qquad + 2 r \dot{r} \dot{\phi} \sin \phi \cos \phi \sin^2 \theta + 2 r \dot{r} \dot{\theta} \sin^2 \phi \sin \theta \cos \theta \\
+&\qquad + 2 r^2 \dot{\phi} \dot{\theta} \sin \phi \cos \phi \sin \theta \cos \theta,
+\end{align*}
+\[
+\dot{z}^2 = \dot{r}^2 \cos^2 \theta + r^2 \dot{\theta}^2 \sin^2 \theta - 2 r \dot{r} \dot{\theta} \sin \theta \cos \theta.
+\]
+Therefore, the kinetic energy is
+\[
+T = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\phi}^2 \sin^2 \theta + r^2 \dot{\theta}^2 ).
+\]
+Hence, the Lagrangian is
+\[
+L = T - U = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\phi}^2 \sin^2 \theta + r^2 \dot{\theta}^2 ) - V(r) - \vec{\sigma} \bfcdot \vec{L}.
+\]
+Thus, the equations of motion are
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{r}} \right) - \frac{\partial L}{\partial r} = m \ddot{r} - m r \dot{\phi}^2 \sin^2 \theta - m r \dot{\theta}^2 + \frac{dV}{dr} + 2 m r \sigma \dot{\phi} \sin^2 \theta = 0,
+\]
+which implies
+\[
+\ddot{r} - r \dot{\phi}^2 \sin^2 \theta - r \dot{\theta}^2 + \left( \frac{1}{m} \right) \left( \frac{dV}{dr} \right) + 2 \sigma r \dot{\phi} \sin^2 \theta = 0,
+\]
+and
+\begin{align*}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\phi}} \right) - \frac{\partial L}{\partial \phi} =& m r^2 \ddot{\phi} \sin^2 \theta + 2 m r \dot{r} \dot{\phi} \sin^2 \theta + 2 m r^2 \dot{\phi} \dot{\theta} \sin \theta \cos \theta \\
+&\qquad - 2 m r \sigma \sin \theta ( \dot{r} \sin \theta + r \dot{\theta} \cos \theta ) = 0,
+\end{align*}
+which implies
+\[
+r^2 \ddot{\phi} \sin^2 \theta + 2 r \dot{r} \dot{\phi} \sin^2 \theta + 2 r^2 \dot{\phi} \dot{\theta} \sin \theta \cos \theta - 2 \sigma r \dot{r} \sin^2 \theta - 2 \sigma r^2 \dot{\theta} \sin \theta \cos \theta = 0,
+\]
+and finally
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} = m r^2 \ddot{\theta} + 2 m r \dot{r} \dot{\theta} - m r^2 \dot{\phi}^2 \sin \theta \cos \theta + 2 m r^2 \sigma \dot{\phi} \sin \theta \cos \theta = 0,
+\]
+which implies
+\[
+r^2 \ddot{\theta} + 2 r \dot{r} \dot{\theta} - r^2 \dot{\phi}^2 \sin \theta \cos \theta + 2 \sigma r^2 \dot{\phi} \sin \theta \cos \theta = 0.
+\]
+\end{parts}
+\end{solution}
+
+\question 
+A particle moves in a plane under the influence of a force, acting toward a center of force, whose magnitude is
+\[
+F = \frac{1}{r^2} \left( 1 - \frac{\dot{r}^2 - 2 \ddot{r} r}{c^2} \right),
+\]
+where $r$ is the distance of the particle to the center of force. Find the generalized potential that will result in such a force, and from that the Lagrangian for the motion in a plane. (The expression for $F$ represents the force between two charges in Weber's electrodynamics.)
+\begin{solution}
+We seek a function $U( r, \dot{r} )$ that satisfies the equation
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{r}} \right) - \frac{\partial U}{\partial r} = \frac{1}{r^2} - \frac{\dot{r}^2}{c^2 r^2} + 2 \frac{\ddot{r}}{c^2 r}.
+\]
+We proceed by ansatz. Since
+\[
+\frac{d}{dt} \left( \frac{2 \dot{r}}{c^2 r} \right) = -\frac{2 \dot{r}^2}{c^2 r^2} + \frac{2 \ddot{r}}{c^2 r} 
+\]
+and since
+\[
+\frac{\partial}{\partial \dot{r}} \left( \frac{\dot{r}^2}{c^2 r} \right) = \frac{2 \dot{r}}{c^2 r},
+\]
+we have
+\[
+\frac{d}{dt} \left[ \frac{\partial}{\partial \dot{r}} \left( \frac{\dot{r}^2}{c^2 r} \right) \right] = -\frac{2 \dot{r}^2}{c^2 r^2} + \frac{2 \ddot{r}}{c^2 r}.
+\]
+Next, we note that
+\[
+\frac{\partial}{\partial r} \left( \frac{1}{r} \right) = -\frac{1}{r^2}.
+\]
+If we take
+\[
+U = \frac{1}{r} + \frac{\dot{r}^2}{c^2 r},
+\]
+then
+\[
+\frac{\partial U}{\partial r} = -\frac{1}{r^2} - \frac{\dot{r}^2}{c^2 r^2}
+\]
+and
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{r}} \right) = -\frac{2 \dot{r}^2}{c^2 r^2} + \frac{2 \ddot{r}}{c^2 r},
+\]
+from which it follows that
+\[
+\frac{d}{dt} \left( \frac{\partial U}{\partial \dot{r}} \right) - \frac{\partial U}{\partial r} = \frac{1}{r^2} - \frac{\dot{r}^2}{c^2 r^2} + \frac{2 \ddot{r}}{c^2 r},
+\]
+as desired. In polar coordinates, the kinetic energy is
+\[
+T = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ).
+\]
+Therefore, the Lagrangian is
+\[
+L = T - U = \frac{1}{2} m ( \dot{r}^2 + r^2 \dot{\theta}^2 ) - \frac{1}{r} \left( 1 + \frac{\dot{r}^2}{c^2} \right).
+\]
+\end{solution}
+
+\question
+A nucleus, originally at rest, decays radioactively by emitting an electron of momentum \SI{1.73}{\MeV/\mathit{c}}, and at right angles to the direction of the electron a neutrino with momentum \SI{1.00}{\MeV/\mathit{c}}. (The \si{\MeV}, million electron volt, is a unit of energy used in modern physics, equal to \SI{1.60e-13}{\J}. Correspondingly, \si{\MeV/\mathit{c}} is a unit of linear momentum equal to \SI{5.34e-22}{\kg . \m / \s}.) In what direction does the nucleus recoil? What is its momentum in \si{\MeV/\mathit{c}}? If the mass of the residual nucleus is \SI{3.90e-25}{\kg} what is its kinetic energy in electron volts?
+\begin{solution}
+Suppose the electron is ejected along the positive $x$ axis and the neutrino along the positive $y$ axis. By conservation of momentum, the momentum of the nucleus is the negative of the vector sum of the momenta of the electron and neutrino. Thus, the angle that the resulting motion of the nucleus makes with the positive $x$ axis is
+\[
+\ang{180} + \tan^{-1} \frac{1.00}{1.73} = \ang{210}.
+\]
+Its momentum is
+\[
+\sqrt{( \SI{1.73}{\MeV/\mathit{c}} )^2 + ( \SI{1.00}{\MeV/\mathit{c}} )^2} = \SI{2.00}{\MeV/\mathit{c}}.
+\]
+Expressed in SI units, this is
+\[
+\SI{2.00}{\MeV/\mathit{c}} \left( \frac{\SI{5.34e-22}{\kg . \m / \s}}{\SI{1}{\MeV/\mathit{c}}} \right) = \SI{1.07e-21}{\kg . \m / \s}.
+\]
+Hence, the kinetic energy of the nucleus is
+\[
+T = \frac{p^2}{2 m} = \left( \frac{( \SI{1.07e-21}{\kg . \m / \s} )^2}{ 2 ( \SI{3.90e-25}{\kg} )} \right) \left( \frac{\SI{1e6}{\eV}}{\SI{1.60e-13}{\J}} \right) = \SI{9.17}{\eV}.
+\]
+\end{solution}
+\question
+A Lagrangian for a particular physical system can be written as
+\[
+L^\prime = \frac{m}{2} ( a \dot{x}^2 + 2 b \dot{x} \dot{y} + c \dot{y}^2 ) - \frac{K}{2} ( a x^2 + 2 b x y + c y^2 ),
+\]
+where $a$, $b$, and $c$ are arbitrary constants but subject to the condition that $b^2 - a c \neq 0$. What are the equations of motion? Examine particularly the two cases $a = 0 = c$ and $b = 0$, $c = -a$. What is the physical system described by the above Lagrangian? Show that the usual Lagrangian for this system as defined by Eq.~($1.57^\prime$) is related to $L^\prime$ by a point transformation (cf. Derivation~10). What is the significance of the condition on the value of $b^2 - a c$?
+\begin{solution}
+We have
+\[
+\frac{\partial L^\prime}{\partial \dot{x}} = m ( a \dot{x} + b \dot{y} ),
+\]
+which implies
+\[
+\frac{d}{dt} \left( \frac{\partial L^\prime}{\partial \dot{x}} \right) = m ( a \ddot{x} + b \ddot{y} ),
+\]
+while
+\[
+\frac{\partial L^\prime}{\partial x} = -K ( ax + by ).
+\]
+Therefore
+\[
+\frac{d}{dt} \left( \frac{\partial L^\prime}{\partial \dot{x}} \right) - \frac{\partial L^\prime}{\partial x} = m ( a \ddot{x} + b \ddot{y} ) + K ( a x + b y ) = 0.
+\]
+Similarly
+\[
+\frac{\partial L^\prime}{\partial \dot{y}} = m ( b \dot{x} + c \dot{y} ),
+\]
+which implies
+\[
+\frac{d}{dt} \left( \frac{\partial L^\prime}{\partial \dot{y}} \right) = m ( b \ddot{x} + c \ddot{y} ),
+\]
+and
+\[
+\frac{\partial L^\prime}{\partial y} = -K ( b x + c y ).
+\]
+Therefore
+\[
+\frac{d}{dt} \left( \frac{\partial L^\prime}{\partial \dot{y}} \right) - \frac{\partial L^\prime}{\partial y} = m ( b \ddot{x} + c \ddot{y} ) + K ( b x + c y ).
+\]
+If $a = c = 0$ or if $b = 0$ and $a = -c$, then the equations of motion reduce to
+\[
+m \ddot{x} + K x = 0
+\]
+and
+\[
+m \ddot{y} + K y = 0.
+\]
+Evidently, the physical system represented by these equations is a two-dimensional harmonic oscillator. This is easily seen to be the case by making the point transformation
+\begin{align*}
+q_1 &= a x + b y \\
+q_2 &= b x + c y
+\end{align*}
+Then the equations of motion are
+\[
+m \ddot{q}_1 + K q_1 = 0
+\]
+and
+\[
+m \ddot{q}_2 + K q_2 = 0.
+\]
+Lastly, if $b^2 - a c = 0$, that is, if $ b = \sqrt{a c}$, then the Lagrangian becomes
+\[
+L^\prime = \frac{1}{2} m ( \sqrt{a} \dot{x} + \sqrt{c} \dot{y} ) - \frac{1}{2} K ( \sqrt{a} x + \sqrt{c} y ).
+\]
+However, this represents a one-dimensional problem. Hence, the condition $b^2 - a c \neq 0$ keeps the point transformation described above from being singular.
+\end{solution}
+
+\question
+Obtain the Lagrange equations of motion for a spherical pendulum, i.e., a mass point suspended by a rigid weightless rod.
+\begin{solution}
+Let $m$ be the mass of the pendulum and let $l$ be its length. We shall work in spherical coordinates, naturally, and shall take the positive $z$ axis as directed vertically downwards. The kinetic energy is
+\[
+T = \frac{1}{2} m l^2 ( \dot{\theta}^2 + \dot{\phi}^2 \sin^2 \theta ),
+\]
+and the potential energy is
+\[
+U = - m g l \cos \theta.
+\]
+Therefore the Lagrangian is
+\[
+L = T - U = \frac{1}{2} m l^2 ( \dot{\theta}^2 + \dot{\phi}^2 \sin^2 \theta ) + m g l \cos \theta.
+\]
+We have therefore
+\[
+\frac{\partial L}{\partial \dot{\theta}} = m l^2 \dot{\theta},
+\]
+whereby
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) = m l^2 \ddot{\theta},
+\]
+and
+\[
+\frac{\partial L}{\partial \theta} = m l^2 \dot{\phi}^2 \sin \theta \cos \theta - m g l \sin \theta.
+\]
+Hence, the first equation of motion is
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} = m l^2 \ddot{\theta} - m l^2 \dot{\phi}^2 \sin \theta \cos \theta + m g l \sin \theta = 0.
+\]
+Next,
+\[
+\frac{\partial L}{\partial \dot{\phi}} = m l^2 \dot{\phi} \sin^2 \theta.
+\]
+Since
+\[
+\frac{\partial L}{\partial \phi} = 0,
+\]
+we have the second equation of motion
+\[
+\frac{d}{dt} \left( m l^2 \dot{\phi} \sin^2 \theta \right) = 0.
+\]
+This last equation expresses the fact that the angular momentum about the $z$ axis is conserved.
+\end{solution}
+
+\question
+A particle of mass $m$ moves in one dimension such that it has the Lagrangian
+\[
+L = \frac{m^2 \dot{x}^4}{12} - m \dot{x}^2 V(x) - V^2(x),
+\]
+where $V$ is some differentiable function of $x$. Find the equation of motion for $x(t)$ and describe the physical nature of the system on the basis of this equation.
+\begin{solution}
+First,
+\[
+\frac{\partial L}{\partial \dot{x}} = \frac{m^2 \dot{x}^3}{3} - 2 m \dot{x} V
+\]
+which yields
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) = m^2 \dot{x}^2 \ddot{x} - 2 m \ddot{x} V - 2 m \dot{x}^2 \frac{dV}{dx},
+\]
+and
+\[
+\frac{\partial L}{\partial x} = -m \dot{x}^2 \frac{dV}{dx} - 2 V \frac{dV}{dx}.
+\]
+Therefore, the equation of motion is
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) - \frac{\partial L}{\partial x} = m^2 \dot{x}^2 \ddot{x} - 2 m \ddot{x} V - m \dot{x}^2 \frac{dV}{dx} + 2 V \frac{dV}{dx} = 0.
+\]
+Recasting this equation in terms of $T$ and $V$, we have
+\[
+2 m \ddot{x} T - 2 m \ddot{x} V - 2 T \frac{dV}{dx} + 2 V \frac{dV}{dx} = 0,
+\]
+which gives
+\[
+\left( m \ddot{x} - \frac{dV}{dx} \right) \left( T - V \right) = 0.
+\]
+Thus, either $T - V = 0$, which will not be satisfied in general, or
+\[
+m \ddot{x} = \frac{dV}{dx},
+\]
+which shows that the force on the particle is derivable from a function of position only, even though the potential, as represented in the Lagrangian, is velocity- dependent.
+\end{solution}
+
+\question
+Two mass points of mass $m_1$ and $m_2$ are connected by a string passing through a hole in a smooth table so that $m_1$ rests on the table surface and $m_2$ hangs suspended. Assuming $m_2$ moves only in a vertical line, what are the generalized coordinates for the system? Write the Lagrange equations for the system and, if possible, discuss the physical significance any of them might have. Reduce the problem to a single second-order differential equation and obtain a first integral of the equation. What is its physical significance? (Consider the motion only until $m_1$ reaches the hole.)
+\begin{solution}
+There are two generalized coordinates, namely, the polar coordinates of $m_1$, taking the hole as the origin. That is, $r$ is the distance between $m_1$ and the hole, and $\phi$ is the rotation angle. The kinetic energy of the system is
+\[
+T = \frac{1}{2} m_1 ( \dot{r}^2 + r^2 \dot{\phi}^2 ) + \frac{1}{2} m_2 \dot{r}^2,
+\]
+and its potential energy is
+\[
+U = m_2 g r.
+\]
+Thus the Lagrangian is
+\[
+L = \frac{1}{2} m_1 ( \dot{r}^2 + r^2 \dot{\phi}^2 ) + \frac{1}{2} m_2 \dot{r}^2 - m_2 g r.
+\]
+Now,
+\[
+\frac{\partial L}{\partial \dot{\phi}} = m_1 r^2 \dot{\phi},
+\]
+and since
+\[
+\frac{\partial L}{\partial \phi} = 0,
+\]
+we have the first Lagrange equation
+\[
+\frac{d}{dt} \left( m_1 r^2 \dot{\phi} \right) = 0.
+\]
+This equation expresses the fact that the angular momentum of $m_1$ is conserved. Next,
+\[
+\frac{\partial L}{\partial \dot{r}} = \left( m_1 + m_2 \right) \dot{r},
+\]
+so that
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{r}} \right) = \left( m_1 + m_2 \right) \ddot{r},
+\]
+while
+\[
+\frac{\partial L}{\partial r} = m_1 r \dot{\phi}^2 - m_2 g.
+\]
+Hence, the second Lagrange equation is
+\[
+\left( m_1 + m_2 \right) \ddot{r} - m_1 r \dot{\phi}^2 + m_2 g = 0.
+\]
+If we let
+\[l = m_1 r^2 \dot{\phi} = \text{constant}
+\]
+be the angular momentum of $m_1$, then we have
+\[
+( m_1 + m_2 ) \ddot{r} - \frac{l^2}{m_1 r^3} + m_2 g = 0.
+\]
+We notice, however, that this implies
+\[
+\frac{d}{dt} \left[ \frac{1}{2} ( m_1 + m_2 ) \dot{r}^2 + \frac{l^2}{2 m_1 r^2} + m_2 g r \right] = \dot{r} \left[ ( m_1 + m_2 ) \ddot{r} - \frac{l^2}{m_1 r^3} + m_2 g \right] = 0.
+\]
+Since
+\[
+\frac{1}{2} ( m_1 + m_2 ) \dot{r}^2 + \frac{l^2}{2 m_1 r^2} + m_2 g r = \frac{1}{2} m_1 ( \dot{r}^2 + r^2 \dot{\phi}^2 ) + \frac{1}{2} m_2 \dot{r}^2 + m_2 g r
+\]
+is just the total energy, $E$, of the system, we find that the total energy is conserved.
+\end{solution}
+
+\question
+Obtain the Lagrangian and equations of motion for the double pendulum illustrated in Fig.~1.4, where the lengths of the pendula are $l_1$ and $l_2$ with corresponding masses $m_1$ and $m_2$.
+\begin{solution}
+The Cartesian coordinates of $m_1$ are
+\begin{align*}
+&x_1 = l_1 \sin \theta_1 \\
+&y_1 = -l_1 \cos \theta_1.
+\end{align*}
+Differentiating these with respect to time yields
+\begin{align*}
+&\dot{x}_1 = l_1 \dot{\theta}_1 \cos \theta_1 \\
+&\dot{y}_1 = l_1 \dot{\theta}_1 \sin \theta_1.
+\end{align*}
+Hence, the kinetic energy of $m_1$ is
+\begin{align*}
+T_1 &= \frac{1}{2} m_1 \left( \dot{x}_1^2 + \dot{y}_1^2 \right) \\
+&= \frac{1}{2} m_1 \left( l_1^2 \dot{\theta}_1^2 \cos^2 \theta_1 + l_1^2 \dot{\theta}_1^2 \sin^2 \theta_1 \right) \\
+&= \frac{1}{2} m_1 l_1^2 \dot{\theta}_1^2,
+\end{align*}
+and its potential energy is
+\[
+V_1 = m_1 g y_1 = -m_1 g l_1 \cos \theta_1.
+\]
+The Cartesian coordinates of $m_2$ are
+\begin{align*}
+&x_2 = l_1 \sin \theta_1 + l_2 \sin \theta_2 \\
+&y_2 = -l_1 \cos \theta_1 - l_2 \cos \theta_2.
+\end{align*}
+Taking time derivatives, we have
+\begin{align*}
+&\dot{x}_2 = l_1 \dot{\theta}_1 \cos \theta_1 + l_2 \dot{\theta}_2 \cos \theta_2 \\
+&\dot{y}_2 = l_1 \dot{\theta}_1 \sin \theta_1 + l_2 \dot{\theta}_2 \sin \theta_2.
+\end{align*}
+The kinetic energy of $m_2$ is thus
+\begin{align*}
+T_2 &= \frac{1}{2} m_2 \left( \dot{x}_2^2 + \dot{y}_2^2 \right) \\
+&= \frac{1}{2} m_2 \bigl( l_1^2 \dot{\theta}_1^2 \cos^2 \theta_1 + l_2^2 \dot{\theta}_2^2 \cos^2 \theta_2 + 2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos \theta_1 \cos \theta_2 \\
+&\phantom{=} \qquad + l_1^2 \dot{\theta}_1^2 \sin^2 \theta_1 + l_2^2 \dot{\theta}_2^2 \sin^2 \theta_2 + 2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \sin \theta_1 \sin \theta_2 \bigr) \\
+&= \frac{1}{2} m_2 \left[ l_1^2 \dot{\theta}_1^2 + l_2^2 \dot{\theta}_2^2 + 2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos \left( \theta_1 - \theta_2 \right) \right],
+\end{align*}
+and its potential energy is
+\[
+V_2 = m_2 g y_2 = -m_2 g \left( l_1 \cos \theta_1 + l_2 \cos \theta_2 \right).
+\]
+Therefore the Lagrangian is
+\begin{align*}
+L &= T - V \\
+&= T_1 + T_2 - \left( V_1 + V_2 \right) \\
+&= \frac{1}{2} \left( m_1 + m_2 \right) l_1^2 \dot{\theta}_1^2 + \frac{1}{2} m_2 l_2^2 \dot{\theta}_2^2 + m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \cos \left( \theta_1 - \theta_2 \right) \\
+&\phantom{=}\qquad + \left( m_1 + m_2 \right) g l_1 \cos \theta_1 + m_2 g l_2 \cos \theta_2.
+\end{align*}
+Now, we have
+\[
+\frac{\partial L}{\partial \dot{\theta}_1} = \left( m_1 + m_2 \right) l_1^2 \dot{\theta}_1 + m_2 l_1 l_2 \dot{\theta}_2 \cos \left( \theta_1 - \theta_2 \right)
+\]
+so that
+\begin{align*}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_1} \right) &= \left( m_1 + m_2 \right) l_1^2 \ddot{\theta}_1 + m_2 l_1 l_2 \ddot{\theta}_2 \cos \left( \theta_1 - \theta_2 \right) \\
+&\phantom{=}\qquad - m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \sin \left( \theta_1 - \theta_2 \right) + m_2 l_1 l_2 \dot{\theta}_2^2 \sin \left( \theta_1 - \theta_2 \right),
+\end{align*}
+while
+\[
+\frac{\partial L}{\partial \theta_1} = -m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \sin \left( \theta_1 - \theta_2 \right) - \left( m_1 + m_2 \right) g l_1 \sin \left( \theta_1 - \theta_2 \right).
+\]
+Thus, we have the equation of motion
+\begin{align*}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_1} \right) - \frac{\partial L}{\partial \theta_1} &= \left( m_1 + m_2 \right) l_1^2 \ddot{\theta}_1 + m_2 l_1 l_2 \ddot{\theta}_2 \cos \left( \theta_1 - \theta_2 \right) \\
+&\phantom{=}\qquad + m_2 l_1 l_2 \dot{\theta}_2^2 \sin \left( \theta_1 - \theta_2 \right) + \left( m_1 + m_2 \right) g l_1 \sin \left( \theta_1 - \theta_2 \right) = 0.
+\end{align*}
+Dividing through by $l_1 \neq 0$ yields
+\begin{align*}
+&\left( m_1 + m_2 \right) l_1 \ddot{\theta}_1 + m_2 l_2 \ddot{\theta}_2 \cos \left( \theta_1 - \theta_2 \right) \\
+&\qquad + m_2 l_2 \dot{\theta}_2^2 \sin \left( \theta_1 - \theta_2 \right) + \left( m_1 + m_2 \right) g \sin \left( \theta_1 - \theta_2 \right) = 0.
+\end{align*}
+Next,
+\[
+\frac{\partial L}{\partial \dot{\theta}_2} = m_2 l_2^2 \dot{\theta}_2 + m_2 l_1 l_2 \dot{\theta}_1 \cos \left( \theta_1 - \theta_2 \right),
+\]
+hence,
+\begin{align*}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_2} \right) &= m_2 l_2^2 \ddot{\theta}_2 + m_2 l_1 l_2 \ddot{\theta}_1 \cos \left( \theta_1 - \theta_2 \right) \\
+&\phantom{=}\qquad - m_2 l_1 l_2 \dot{\theta}_1^2 \sin \left( \theta_1 - \theta_2 \right) + m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \sin \left( \theta_1 - \theta_2 \right),
+\end{align*}
+and finally,
+\[
+\frac{\partial L}{\partial \theta_2} = m_2 l_1 l_2 \dot{\theta}_1 \dot{\theta}_2 \sin \left( \theta_1 - \theta_2 \right) - m_2 g l_2 \sin \theta_2.
+\]
+Therefore, the second equation of motion is
+\begin{align*}
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}_2} \right) - \frac{\partial L}{\partial \theta_2} &= m_2 l_2^2 \ddot{\theta}_2 + m_2 l_1 l_2 \ddot{\theta}_1 \cos \left( \theta_1 - \theta_2 \right) \\
+&\phantom{=}\qquad - m_2 l_1 l_2 \dot{\theta}_1^2 \sin \left( \theta_1 - \theta_2 \right) + m_2 g l_2 \sin \theta_2 = 0.
+\end{align*}
+Dividing through by $m_2 l_2 \neq 0$ yields
+\[
+l_2 \ddot{\theta}_2 + l_1 \ddot{\theta}_1 \cos \left( \theta_1 - \theta_2 \right) - l_1 \dot{\theta}_1^2 \sin \left( \theta_1 - \theta_2 \right) + g \sin \theta_2 = 0.
+\]
+\end{solution}
+
+\question
+Obtain the equation of motion for a particle falling vertically under the influence of gravity when frictional forces obtainable from a dissipation function $\frac{1}{2} k v^2$ are present. Integrate the equation to obtain the velocity as a function of time and show that the maximum possible velocity for a fall from rest is $v = m g / k$.
+\begin{solution}
+We take the downward direction as positive. The Lagrangian is
+\[
+L = T - V = \frac{1}{2} m \dot{x}^2 + m g x.
+\]
+Hence, the equation of motion is
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) - \frac{\partial L}{\partial x} + \frac{\partial}{\partial \dot{x}} \left( \frac{1}{2} k \dot{x}^2 \right) = m \ddot{x} + k \dot{x} - m g = 0.
+\]
+This yields
+\[
+\frac{dv}{dt} = g - \frac{k}{m} v
+\]
+Rearranging, we have
+\[
+\frac{dv}{g - (k / m) v} = dt.
+\]
+We may integrate this equation to obtain
+\[
+\ln \left( g - \frac{k}{m} v \right) = -\frac{k}{m} t + C,
+\]
+where $C$ is  a constant of integration. Solving this equation for $v$ and using the initial condition that $v = 0$ at $t = 0$, we have
+\[
+v = \frac{m g}{k} \left( 1 - e^{-k t / m} \right)
+\]
+In order to find the maximum possible velocity, we take the limit as $t$ tends to infinity:
+\[
+v_{\mathrm{max}} = \lim_{t \rightarrow \infty} v = \frac{m g}{k},
+\]
+as desired.
+\end{solution}
+
+\question
+A spring of rest length $L_a$ (no tension) is connected to a support at one end and has a mass $M$ attached at the other. Neglect the mass of the spring, the dimension of the mass $M$, and assume that the motion is confined to a vertical plane. Also, assume that the spring only stretches without bending but it can swing in the plane.
+\begin{parts}
+\part
+Using the angular displacement of the mass from the vertical and the length that the spring has stretched from its rest length (hanging with the mass $M$), find Lagrange's equations.
+\part
+Solve these equations for small stretching and angular displacements.
+\part
+Solve the equations in part (a) to the next order in both stretching and angular displacement. This part is amenable to hand calculations. Using some reasonable assumptions about the spring constant, the mass, and the rest length, discuss the motion. Is a resonance likely under the assumptions stated in the problem?
+\part
+(For analytic computer programs.) Consider the spring to have a total mass $m \ll M$. Neglecting the bending of the spring, set up Lagrange's equations correctly to first order in $m$ and the angular and linear displacements.
+\part
+(For numerical computer analysis.) Make sets of reasonable assumptions of the constants in part (a) and make a single plot of the two coordinates as functions of time.
+\end{parts}
+\begin{solution}
+\begin{parts}
+\part
+Let $\theta$ be the angular displacement and let $x$ be the linear displacement of the spring from its rest length. The rest length of the spring is $ l = L_a + ( M g / k )$, where $k$ is the spring constant. Then the kinetic energy of the system is
+\[
+T = \frac{1}{2} M \left( \dot{x}^2 + \left( l + x \right)^2 \dot{\theta}^2 \right),
+\]
+while its potential energy is
+\[
+U = -M g \left( l + x \right) \cos \theta + \frac{1}{2} k \left( \frac{M g}{k} + x \right)^2.
+\]
+Hence, the Lagrangian is
+\[
+L = T - U = \frac{1}{2} M \left( \dot{x}^2 + \left( l + x \right)^2 \dot{\theta}^2 \right) + M g \left(  l + x \right) \cos \theta - \frac{1}{2} k \left( \frac{M g}{k} + x \right)^2.
+\]
+For the first equation of motion, we have
+\[
+\frac{\partial L}{\partial \dot{x}} = M \dot{x},
+\]
+and therefore
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) = M \ddot{x},
+\]
+while
+\[
+\frac{\partial L}{\partial x} = M \left( l + x \right) \dot{\theta}^2 + M g \cos \theta - M g - k x.
+\]
+Thus the first equation of motion is
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{x}} \right) - \frac{\partial L}{\partial x} = M \ddot{x} - M \left( l + x \right) \dot{\theta}^2 + M g \left( 1 - \cos \theta \right) + k x = 0.
+\]
+Dividing through by $M \neq 0$ yields
+\[
+\ddot{x} - \left( l + x \right) \dot{\theta}^2 + g \left( 1 - \cos \theta \right) + \frac{k}{M} x = 0.
+\]
+In regards to the second equation of motion, we have
+\[
+\frac{\partial L}{\partial \dot{\theta}} = M \left( l + x \right)^2 \dot{\theta},
+\]
+and therefore
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) = 2 M \left( l + x \right) \dot{x} \dot{\theta} + M \left( l + x \right)^2 \ddot{\theta},
+\]
+while
+\[
+\frac{\partial L}{\partial \theta} = -M g \left( l + x \right) \sin \theta.
+\]
+Hence, the second equation of motion is
+\[
+\frac{d}{dt} \left( \frac{\partial L}{\partial \dot{\theta}} \right) - \frac{\partial L}{\partial \theta} = M \left( l + x \right)^2 \ddot{\theta} + 2 M \left( l + x \right) \dot{x} \dot{\theta} + M g \left( l + x \right) \sin \theta = 0.
+\]
+Dividing through by $M \left( l + x \right) \neq 0$ yields
+\[
+\left( l + x \right) \ddot{\theta} + 2 \dot{x} \dot{\theta} + g \sin \theta = 0.
+\]
+\part
+In order to analyze the system for small displacements, we introduce a ``small'' parameter, $\epsilon$, and make the substitutions $x \rightarrow \epsilon x$ and $\theta \rightarrow \epsilon \theta$. The equations of motion then become
+\begin{gather}
+\epsilon \ddot{x} - \left( l + \epsilon x \right) \epsilon^2 \dot{\theta}^2 + g \left( 1 - \cos \epsilon \theta \right) + \epsilon \frac{k}{M} x = 0, \\
+\left( l + \epsilon x \right) \epsilon \ddot{\theta} + 2 \epsilon^2 \dot{x} \dot{\theta} + g \sin \epsilon \theta = 0.
+\end{gather}
+Ignoring terms of second degree and higher in $\epsilon$, we have
+\begin{gather*}
+\epsilon \ddot{x} + \epsilon \frac{k}{M} x = 0, \\
+\epsilon \ddot{\theta} + \epsilon \frac{g}{l} \theta = 0.
+\end{gather*}
+If $\epsilon \neq 0$, we obtain
+\begin{gather*}
+\ddot{x} + \frac{k}{M} x = 0, \\
+\ddot{\theta} + \frac{g}{l} \theta = 0.
+\end{gather*}
+These are the equations of motion for a two-dimensional simple harmonic oscillator. Subject to the initial conditions $x_0 \left( 0 \right) = A$, $\dot{x}_0 \left( 0 \right) = 0$, $\theta_0 \left( 0 \right) = B$, $\dot{\theta}_0 \left( 0 \right) = 0$, the equations of motion have the solutions
+\begin{gather*}
+x = A \cos \omega_1 t, \\
+\theta = B \cos \omega_2 t,
+\end{gather*}
+where $\omega_1 = \sqrt{k / M}$ and $\omega_2 = \sqrt{g / l}$.
+\end{parts}
+\end{solution}
+\end{questions}
